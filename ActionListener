@@ -1,0 +1,19 @@
+/*
+Functional way of creating an ActionListener for an AWT button
+*/
+
+button.addActionListener(
+        (ActionEvent e) -> {System.out.println("Hello There - Event Recieved: " + e);}
+        );  
+        button.addActionListener(event -> System.out.println("This is also an event"));
+        
+        
+/*
+Ordinary way of creating an ActionListener for an AWT button
+*/
+
+button.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+                System.out.println("Hello There: event received: " + e);
+                }
+        })
